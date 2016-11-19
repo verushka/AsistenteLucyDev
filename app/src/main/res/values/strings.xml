@@ -2,4 +2,12 @@
     <string name="app_name">Asistente Lucy</string>
     <string name="app_title">Asistente Lucy</string>
     <string name="title_activity_welcome">WelcomeActivity</string>
+    <string name="title_activity_form">Informacion Personal</string>
+    <string name="field_title">Prefijo</string>
+    <string name="field_first_name">Nombre</string>
+    <string name="field_last_name">Apellido</string>
+    <string name="field_sex">Sexo</string>
+    <string name="field_date">Fecha Nacimiento</string>
+    <string name="speech_not_supported">Frase no encontrada</string>
+    <string name="speech_prompt">Presione para hablar</string>
 </resources>
