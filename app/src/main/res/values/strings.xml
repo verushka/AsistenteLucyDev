@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">AsistenteLucyDev</string>
+    <string name="app_name">Asistente Lucy</string>
+    <string name="app_title">Asistente Lucy</string>
+    <string name="title_activity_welcome">WelcomeActivity</string>
 </resources>
