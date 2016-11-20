@@ -14,18 +14,5 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        final Button button = (Button) findViewById(R.id.buttonForm);
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                goForm(v);
-            }
-        });
-    }
-
-    public void goForm(View view)
-    {
-        Intent intent = new Intent(this, FormActivity.class);
-        startActivity(intent);
     }
 }
