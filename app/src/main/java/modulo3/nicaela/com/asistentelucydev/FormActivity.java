@@ -10,6 +10,8 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.InputType;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -79,10 +81,10 @@ public class FormActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 /*String toSpeak = name.getText().toString();*/
-                String toSpeak = "Genial! Juan es un bonito nombre, es tuyo?";
-                Toast.makeText(getApplicationContext(), toSpeak,Toast.LENGTH_SHORT).show();
-                textToSpeech1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
-                helpText.setText(toSpeak);
+//                String toSpeak = "Genial! Juan es un bonito nombre, es tuyo?";
+//                Toast.makeText(getApplicationContext(), toSpeak,Toast.LENGTH_SHORT).show();
+//                textToSpeech1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
+//                helpText.setText(toSpeak);
             }
         });
 
@@ -90,11 +92,22 @@ public class FormActivity extends AppCompatActivity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 if(hasFocus) {
-                    String toSpeak = "Cual es tu titulo? o prefieres que te llamen Senor o Senora";
+                    String toSpeak = "Cual es tu titulo? o prefieres que te llamen Señor o Señora";
                     Toast.makeText(getApplicationContext(), toSpeak,Toast.LENGTH_SHORT).show();
                     textToSpeech1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
                     helpText.setText(toSpeak);
                 }
+            }
+        });
+
+        titleText.setOnTouchListener(new View.OnTouchListener(){
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                int inType = titleText.getInputType(); // backup the input type
+                titleText.setInputType(InputType.TYPE_NULL); // disable soft input
+                titleText.onTouchEvent(event); // call native handler
+                titleText.setInputType(inType); // restore input type
+                return true; // consume touch even
             }
         });
 
@@ -105,7 +118,19 @@ public class FormActivity extends AppCompatActivity {
                     String toSpeak = "Cual es tu primer nombre?";
                     Toast.makeText(getApplicationContext(), toSpeak,Toast.LENGTH_SHORT).show();
                     textToSpeech1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
+                    helpText.setText(toSpeak);
                 }
+            }
+        });
+
+        firstNameText.setOnTouchListener(new View.OnTouchListener(){
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                int inType = firstNameText.getInputType(); // backup the input type
+                firstNameText.setInputType(InputType.TYPE_NULL); // disable soft input
+                firstNameText.onTouchEvent(event); // call native handler
+                firstNameText.setInputType(inType); // restore input type
+                return true; // consume touch even
             }
         });
 
@@ -116,7 +141,19 @@ public class FormActivity extends AppCompatActivity {
                     String toSpeak = "Cual es tu Apellido?";
                     Toast.makeText(getApplicationContext(), toSpeak,Toast.LENGTH_SHORT).show();
                     textToSpeech1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
+                    helpText.setText(toSpeak);
                 }
+            }
+        });
+
+        lastNameText.setOnTouchListener(new View.OnTouchListener(){
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                int inType = lastNameText.getInputType(); // backup the input type
+                lastNameText.setInputType(InputType.TYPE_NULL); // disable soft input
+                lastNameText.onTouchEvent(event); // call native handler
+                lastNameText.setInputType(inType); // restore input type
+                return true; // consume touch even
             }
         });
 
@@ -127,7 +164,19 @@ public class FormActivity extends AppCompatActivity {
                     String toSpeak = "Cual es tu sexo?";
                     Toast.makeText(getApplicationContext(), toSpeak,Toast.LENGTH_SHORT).show();
                     textToSpeech1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
+                    helpText.setText(toSpeak);
                 }
+            }
+        });
+
+        sexText.setOnTouchListener(new View.OnTouchListener(){
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                int inType = sexText.getInputType(); // backup the input type
+                sexText.setInputType(InputType.TYPE_NULL); // disable soft input
+                sexText.onTouchEvent(event); // call native handler
+                sexText.setInputType(inType); // restore input type
+                return true; // consume touch even
             }
         });
 
@@ -138,7 +187,19 @@ public class FormActivity extends AppCompatActivity {
                     String toSpeak = "Cual es tu estado civil?";
                     Toast.makeText(getApplicationContext(), toSpeak,Toast.LENGTH_SHORT).show();
                     textToSpeech1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
+                    helpText.setText(toSpeak);
                 }
+            }
+        });
+
+        stateText.setOnTouchListener(new View.OnTouchListener(){
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                int inType = stateText.getInputType(); // backup the input type
+                stateText.setInputType(InputType.TYPE_NULL); // disable soft input
+                stateText.onTouchEvent(event); // call native handler
+                stateText.setInputType(inType); // restore input type
+                return true; // consume touch even
             }
         });
     }

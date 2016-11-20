@@ -92,7 +92,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:background="@drawable/bg_border_rounded"
-                android:layout_toEndOf="@id/id_img_lucy"/>
+                android:layout_toEndOf="@id/id_img_lucy"
+                android:padding="20dp" />
         </RelativeLayout>
     </LinearLayout>
 </RelativeLayout>
