@@ -85,7 +85,7 @@
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_alignParentStart="true"
-                android:background="@drawable/lucy_small"
+                android:background="@mipmap/lucy_smalle"
                 android:layout_alignParentTop="true" />
 
             <TextView
