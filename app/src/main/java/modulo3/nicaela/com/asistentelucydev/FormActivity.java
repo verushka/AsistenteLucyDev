@@ -48,7 +48,7 @@ public class FormActivity extends AppCompatActivity {
         lastNameText = (EditText) findViewById(R.id.editLastName);
         sexText = (EditText) findViewById(R.id.editSex);
         stateText = (EditText) findViewById(R.id.editState);
-        helpText = (TextView) findViewById(R.id.id_img_lucy);
+        helpText = (TextView) findViewById(R.id.id_text_lucy);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
